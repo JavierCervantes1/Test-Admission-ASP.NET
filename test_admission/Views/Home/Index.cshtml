@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Sección 1";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Sección Uno</h1>
+
+    <div class="card">
+        <div class="card-header">Series</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="x_value">X</label>
+                    <input type="number" class="form-control" name="x_value" required autofocus/>
+                </div>
+                <div class="col-md-2">
+                    <label for="y_value">Y</label>
+                    <input type="number" class="form-control" name="y_value" required />
+                </div>
+                <div class="col-md-3 d-flex">
+                    <button type="button" id="btnSumSerie" class="btn btn-dark w-100 align-self-end">
+                        Obtener Suma de Series
+                    </button>
+                </div>
+                <div class="col-md-5 text-start font-weight-semibold">
+                    <label>Resultado: </label>
+                    <p id="showResultSeries"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Obtener próximas 10 fechas de un día de la semana
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="date">Fecha de Partida</label>
+                    <input type="date" class="form-control" id="date" name="date" />
+                </div>
+                <div class="col-md-2">
+                    <label for="day">Índice día semana</label>
+                    <input type="number" class="form-control" id="day" name="day" min="1" max="7" />
+                </div>
+                <div class="col-md-3 d-flex" style="max-height: 62px;">
+                    <button type="button" id="btnNextDatesWeek" class="btn btn-dark w-100 align-self-end">
+                        Obtener fechas
+                    </button>
+                </div>
+                <div class="col-md-5 text-start font-weight-semibold">
+                    <label>Resultado: </label>
+                    <p id="showNextDates"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/section_one.js"></script>

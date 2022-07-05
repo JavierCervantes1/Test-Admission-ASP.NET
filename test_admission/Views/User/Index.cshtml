@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Sección 2";
+}
+
+<div class="text-start">
+    <h1 class="display-4">Sección Dos</h1>
+
+    <div class="card">
+        <div class="card-header">Registrar Usuario</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mt-2">
+                    <label for="Firstname">Nombres</label>
+                    <input type="text" class="form-control" name="Firstname" id="Firstname" />
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="Surname">Apellidos</label>
+                    <input type="text" class="form-control" name="Surname" id="Surname"/>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="Identification">Cédula</label>
+                    <input type="number" class="form-control" name="Identification" id="Identification" />
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="Birthday">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" name="Birthday" id="Birthday"/>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="Salary">Salario</label>
+                    <input type="number" class="form-control" name="Salary" id="Salary" />
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="y_value">Cargo</label>
+                    <select class="form-control" name="Cod_position" id="Cod_position">
+                        <option value="">[Seleccionar Cargo]</option>
+                        <option value="1">Director</option>
+                        <option value="2">Developer</option>
+                        <option value="3">Contador</option>
+                    </select>
+                </div>
+                <div class="col-md-12 d-flex mt-3 justify-content-end">
+                    <button type="button" id="btnSaveUser" class="btn btn-dark w-25">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Todos los Usuarios
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-hover table-striped w-100">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Cédula</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Salario</th>
+                        <th>Cargo</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyUsers"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/section_two.js"></script>
